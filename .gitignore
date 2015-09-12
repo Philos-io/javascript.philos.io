@@ -1,2 +1,3 @@
-tests/snippets.js
 node_modules/
+test/lodash.spec.js
+solutions/

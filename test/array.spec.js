@@ -1,4 +1,3 @@
-// Remove all native functions from an array
 'use strict';
 
 var expect = require('chai').expect;
@@ -9,14 +8,16 @@ var Collection =  require('../array.js');
 
 
 describe('Array', function(){
-	var list, $;
 
-	beforeEach(function(){
-		list = [1, 3, 4];
-		$ = new Collection();
-	});
 
 	describe('first', function(){
+		var list, $;
+
+		beforeEach(function(){
+			list = [1, 3, 4];
+			$ = new Collection();
+		});
+
 		it('Should return the first element of an array', function(){
 			expect($.first(list)).to.deep.equal([1]);
 		});
@@ -38,4 +39,9 @@ describe('Array', function(){
 				expect($.first(list, 10)).to.deep.equal(list);
 		});
 	});
+
+	describe('last', function(){
+		
+	});
+
 });
