@@ -49,3 +49,20 @@ function success(error){
 
 }
 // Last small issue: what happens if an error is thrown from the success callback
+return $.Deferred(function(defer){
+		    // Simulation a long running process with setTimeout
+				setTimeout(function(){
+					while (i < 100) {
+							data.push(i++);
+					}
+
+					defer.resolve(data);
+
+				}, 300);
+			}).promise();
+
+
+      getData()
+		  .done(function(data){
+      		console.log(data);
+		});
