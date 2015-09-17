@@ -1,5 +1,8 @@
 module.exports = {
-	first: function(array, n){},
+	identity: function(value){
+	}
+	first: function(array, n){
+	},
 	last: function(array,n){},
 	each: function(list, callback){},
 	indexOf: function(list, search){},
