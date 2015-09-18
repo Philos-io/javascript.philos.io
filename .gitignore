@@ -1,3 +1,5 @@
 node_modules/
 test/lodash.spec.js
 solutions/
+asynchronous javascript/
+lodash.js

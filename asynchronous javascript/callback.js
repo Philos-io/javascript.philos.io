@@ -34,3 +34,21 @@ console.log(result);
 // Same issue in both cases, the result is undefined
 
 // How could we resolve this issue?
+function getData(callback){
+  var data = [], i = 0;
+	// Simulation a long running process with setTimeout
+  setTimeout(function(){
+    while (i < 100) {
+        data.push(i++);
+    }
+
+		callback(data);
+
+  }, 300);
+
+	return data;
+}
+
+getData(function(data){
+	console.log(data);
+});
